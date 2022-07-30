@@ -2,18 +2,20 @@ import React from 'react';
 import Card from './Card';
 const ErrorModal = (props) => {
     return ( 
+        <div>
+            <div onClick={props.onConfirm}/>
         <Card>
             <header>
-                <h2></h2>
+                <h2>{props.title}</h2>
             </header>
             <div>
-                <p></p>
+                <p>{props.message}</p>
             </div>
             <footer>
-                <button>Okay</button>
+                <button onClick={props.onConfirm}>Okay</button>
             </footer>
         </Card>
-        
+        </div>
     )
 };
 
